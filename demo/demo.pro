@@ -11,6 +11,7 @@ SOURCES += main.cc
 
 include(../common.prf)
 
+#fileinstallation
 target.path = $$BINDIR
 INSTALLS += target
 
