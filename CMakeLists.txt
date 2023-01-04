@@ -14,4 +14,5 @@ find_package(Qt5 COMPONENTS Core REQUIRED)
 set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(qlogsystem)
+add_subdirectory(unit)
 add_subdirectory(demo)
