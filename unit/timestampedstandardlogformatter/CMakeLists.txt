@@ -6,3 +6,5 @@ target_link_libraries(tst_timestampedstandardlogformattertest
 )
 target_include_directories(tst_timestampedstandardlogformattertest 
     PRIVATE ${CMAKE_SOURCE_DIR}/qlogsystem)
+
+add_test(NAME timestampedstandardlogformattertest COMMAND tst_timestampedstandardlogformattertest)

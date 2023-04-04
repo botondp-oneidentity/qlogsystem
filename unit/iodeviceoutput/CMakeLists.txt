@@ -6,3 +6,5 @@ target_link_libraries(tst_iodeviceoutput
 )
 target_include_directories(tst_iodeviceoutput 
     PRIVATE ${CMAKE_SOURCE_DIR}/qlogsystem)
+
+add_test(NAME iodeviceoutput COMMAND tst_iodeviceoutput)

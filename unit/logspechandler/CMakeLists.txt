@@ -6,3 +6,5 @@ target_link_libraries(tst_logspechandlertest
 )
 target_include_directories(tst_logspechandlertest 
     PRIVATE ${CMAKE_SOURCE_DIR}/qlogsystem)
+
+add_test(NAME logspechandlertest COMMAND tst_logspechandlertest)

@@ -7,3 +7,5 @@ target_link_libraries(tst_macrostest
 )
 target_include_directories(tst_macrostest 
     PRIVATE ${CMAKE_SOURCE_DIR}/qlogsystem)
+
+add_test(NAME macrostest COMMAND tst_macrostest)

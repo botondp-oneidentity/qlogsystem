@@ -6,3 +6,5 @@ target_link_libraries(tst_threadsafetytest
 )
 target_include_directories(tst_threadsafetytest 
     PRIVATE ${CMAKE_SOURCE_DIR}/qlogsystem)
+
+add_test(NAME threadsafetytest COMMAND tst_threadsafetytest)

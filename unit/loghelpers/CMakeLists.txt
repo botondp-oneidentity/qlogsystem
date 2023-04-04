@@ -7,3 +7,5 @@ target_link_libraries(tst_loghelperstest
 )
 target_include_directories(tst_loghelperstest 
     PRIVATE ${CMAKE_SOURCE_DIR}/qlogsystem)
+
+add_test(NAME loghelperstest COMMAND tst_loghelperstest)
