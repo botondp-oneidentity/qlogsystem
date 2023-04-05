@@ -18,3 +18,7 @@ enable_testing()
 add_subdirectory(qlogsystem)
 add_subdirectory(unit)
 add_subdirectory(demo)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules")
+
+include(Packing)
