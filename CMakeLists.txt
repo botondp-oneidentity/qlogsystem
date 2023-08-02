@@ -21,4 +21,5 @@ add_subdirectory(demo)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules")
 
+include(dox)
 include(Packing)

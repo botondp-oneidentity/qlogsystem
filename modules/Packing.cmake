@@ -8,8 +8,17 @@ set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Efficient and easy to use logger library 
 
 set(CPACK_PACKAGE_DESCRIPTION_FILE ${CMAKE_SOURCE_DIR}/README.md)
 
-#set(CPACK_PACKAGE_VENDOR "")
-#set(CPACK_PACKAGE_CONTACT "")
+set(CPACK_PACKAGE_VENDOR "Humanity")
+set(CPACK_PACKAGE_CONTACT "${CPACK_PACKAGE_VENDOR}")
+
+#set(CPACK_RESOURCE_FILE_LICENSE "/usr/share/cmake-3.22/Templates/CPack.GenericLicense.txt")
+#File based license for include
+
+#set(CPACK_RESOURCE_FILE_README "/usr/share/cmake-3.22/Templates/CPack.GenericDescription.txt")
+#File based description for include
+
+#set(CPACK_RESOURCE_FILE_WELCOME "/usr/share/cmake-3.22/Templates/CPack.GenericWelcome.txt")
+#File based welcome for include
 
 set(CPACK_PACKAGE_INSTALL_DIRECTORY ${CPACK_PACKAGE_NAME})
 SET(CPACK_OUTPUT_FILE_PREFIX "${CMAKE_SOURCE_DIR}/packages")
@@ -24,25 +33,24 @@ set(CPACK_PACKAGE_VERSION "${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSIO
 #???
 #CPACK_SOURCE_GENERATOR
 
-SET (CPACK_GENERATOR "DEB")
 SET (CPACK_SOURCE_GENERATOR TGZ)
 
 set(CPACK_PACKAGING_INSTALL_PREFIX "/usr")
 
-#DEB specific variables
+if (APPLE)
+    SET (CPACK_GENERATOR "DMG")
 
-#set(CPACK_DEBIAN_PACKAGE_NAME ${CPACK_PACKAGE_NAME})#default value
+    include(DMG)
+elseif (WIN32)
+    SET (CPACK_GENERATOR "WIX")
 
-# package name for deb. If set, then instead of some-application-0.9.2-Linux.deb
-# you'll get some-application_0.9.2_amd64.deb (note the underscores too)
-set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+    include(WIX)
+else ()
+    SET (CPACK_GENERATOR "DEB") # "RPM" "IFW"
 
-set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Test Name")
-
-#lzma - Lempel–Ziv–Markov chain algorithm, xz  -XZ Utils compression, bzip2 - bzip2 Burrows–Wheeler algorithm,
-#zstd - New in version 3.22. Zstandard compression, gzip - GNU Gzip compression
-set(CPACK_DEBIAN_COMPRESSION_TYPE lzma)
-
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libqt5core5a (>= 5.15.0)")
+    include(DEB)
+    include(RPM)
+    include(IFW)
+endif ()
 
 include(CPack)
