@@ -23,3 +23,6 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules")
 
 include(dox)
 include(Packing)
+
+install(FILES LICENSE DESTINATION doc/qlogsystem)
+install(FILES README.md DESTINATION doc/qlogsystem)
