@@ -6,6 +6,7 @@
 # you'll get some-application_0.9.2_amd64.deb (note the underscores too)
 set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
 
+#TODO: Maintainer names
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Test Name")
 
 #Use CMake project description as DEB description

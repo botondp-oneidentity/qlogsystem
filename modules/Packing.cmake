@@ -8,10 +8,11 @@ set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Efficient and easy to use logger library 
 
 set(CPACK_PACKAGE_DESCRIPTION_FILE ${CMAKE_SOURCE_DIR}/README.md)
 
+#TODO: Maintainer names
 set(CPACK_PACKAGE_VENDOR "Humanity")
 set(CPACK_PACKAGE_CONTACT "${CPACK_PACKAGE_VENDOR}")
 
-#set(CPACK_RESOURCE_FILE_LICENSE "/usr/share/cmake-3.22/Templates/CPack.GenericLicense.txt")
+set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_SOURCE_DIR}/LICENSE)
 #File based license for include
 
 #set(CPACK_RESOURCE_FILE_README "/usr/share/cmake-3.22/Templates/CPack.GenericDescription.txt")
