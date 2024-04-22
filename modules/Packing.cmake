@@ -47,7 +47,7 @@ elseif (WIN32)
 
     include(WIX)
 else ()
-    SET (CPACK_GENERATOR "DEB") # "RPM" "IFW"
+    SET (CPACK_GENERATOR "DEB;RPM") #  "IFW"
 
     include(DEB)
     include(RPM)
