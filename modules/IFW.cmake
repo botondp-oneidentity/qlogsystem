@@ -9,10 +9,15 @@ set(CPACK_IFW_VERBOSE ON)
 
 set(CPACK_IFW_PRODUCT_URL "https://github.com/balabit/qlogsystem")
 
+set(CPACK_IFW_PACKAGE_WINDOW_ICON "${CMAKE_SOURCE_DIR}/picture.png")
+set(CPACK_IFW_PACKAGE_LOGO "${CMAKE_SOURCE_DIR}/picture.png")
+set(CPACK_IFW_PACKAGE_BACKGROUND "${CMAKE_SOURCE_DIR}/picture.png")
+
 set(CPACK_IFW_TARGET_DIRECTORY "@HomeDir@/.local/lib/qlogsystem")
 
-#set (CPACK_IFW_PACKAGE_NAME "qlogsystemP")
-#set (CPACK_IFW_PACKAGE_TITLE "qlogsystemPack")
+set(CPACK_IFW_PACKAGE_ALLOW_NON_ASCII_CHARACTERS ON)
+
+set(CPACK_IFW_ARCHIVE_FORMAT tar.gz)
 
 CPACK_ADD_COMPONENT(qlogsystem-project
     REQUIRED
@@ -36,3 +41,4 @@ cpack_ifw_configure_component(qlogsystem-project
 )
 
 set(CPACK_COMPONENTS_ALL qlogsystem-project)
+
