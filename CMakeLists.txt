@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.22)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -12,6 +12,9 @@ project(qlogsystem-project
 find_package(Qt5 COMPONENTS Core REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/install/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/install/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/install/bin)
 
 enable_testing()
 
@@ -21,11 +24,9 @@ add_subdirectory(demo)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules")
 
-install(FILES LICENSE DESTINATION doc/qlogsystem)
-install(FILES README.md DESTINATION doc/qlogsystem)
-
 include(dox)
 include(Packing)
+
 
 
 
