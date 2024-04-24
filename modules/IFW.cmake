@@ -23,11 +23,11 @@ CPACK_ADD_COMPONENT(qlogsystem-project
     REQUIRED
 )
 
-install(TARGETS qlogsystem DESTINATION lib COMPONENT qlogsystem-project)
+set(PACKAGES_DATA "../../../../../packages/libqlogsystem/data")
+install(TARGETS qlogsystem DESTINATION ${PACKAGES_DATA} COMPONENT qlogsystem-project)
 install(FILES 
     ${CMAKE_SOURCE_DIR}/README.md 
-    ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libqlogsystem.a 
-    DESTINATION lib #"@TargetDir@" 
+    DESTINATION ${PACKAGES_DATA}
     COMPONENT qlogsystem-project)
 
 
@@ -35,7 +35,7 @@ cpack_ifw_configure_component(qlogsystem-project
     FORCED_INSTALLATION
     NAME libqlogsystem
     DISPLAY_NAME "qlogsystem library"
-    DESCRIPTION ${CPACK_IFW_ROOT} #${CPACK_PACKAGE_DESCRIPTION_SUMMARY}
+    DESCRIPTION ${CPACK_PACKAGE_DIRECTORY} #${CPACK_PACKAGE_DESCRIPTION_SUMMARY}
     VERSION ${CPACK_PACKAGE_VERSION}
     LICENSES "License" "LICENSE"
 )

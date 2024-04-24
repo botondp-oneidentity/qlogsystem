@@ -3,3 +3,17 @@ build/*
 doc/html/*
 doc/coverage/*
 packages/*
+_CPack_Packages
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest*.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CPackConfig.cmake
+CPackSourceConfig.cmake
