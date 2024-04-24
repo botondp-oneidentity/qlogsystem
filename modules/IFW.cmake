@@ -2,9 +2,6 @@
 include(CPackIFW)
 
 set(CPACK_IFW_ROOT "/home/osy/Qt/Tools/QtInstallerFramework/4.6/")
-
-set(CPACK_GENERATOR IFW)
-
 set(CPACK_IFW_VERBOSE ON)
 
 set(CPACK_IFW_PRODUCT_URL "https://github.com/balabit/qlogsystem")
