@@ -24,7 +24,10 @@ add_subdirectory(demo)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules")
 
-include(dox)
+if (!WIN32)
+    include(dox)
+endif()
+
 include(Packing)
 
 
