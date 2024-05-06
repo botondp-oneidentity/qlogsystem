@@ -3,6 +3,8 @@ project(qlogsystem-unit
     DESCRIPTION "Unit tests for qlogsystem"
 )
 
+add_compile_definitions(QLOGSYSTEM_LIBRARY)
+
 add_library(commonHeader INTERFACE)
 target_include_directories(commonHeader INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
