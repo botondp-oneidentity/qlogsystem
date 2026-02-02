@@ -9,7 +9,7 @@ project(qlogsystem-project
     LANGUAGES CXX
 )
 
-find_package(Qt5 COMPONENTS Core REQUIRED)
+find_package(Qt6 COMPONENTS Core REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/install/lib)

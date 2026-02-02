@@ -15,7 +15,7 @@ set(SOURCES
 
 add_compile_definitions(QLOGSYSTEM_LIBRARY)
 
-add_library(qlogsystem ${SOURCES})
+add_library(qlogsystem SHARED ${SOURCES})
 target_include_directories(qlogsystem PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(qlogsystem PUBLIC Qt5::Core)
+target_link_libraries(qlogsystem PUBLIC Qt6::Core)
 install(TARGETS qlogsystem DESTINATION lib)
