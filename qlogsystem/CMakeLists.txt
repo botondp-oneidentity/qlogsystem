@@ -13,9 +13,8 @@ set(SOURCES
     logspechandler.cc
 )
 
-add_compile_definitions(QLOGSYSTEM_LIBRARY)
-
 add_library(qlogsystem SHARED ${SOURCES})
 target_include_directories(qlogsystem PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(qlogsystem PUBLIC Qt6::Core)
+target_compile_definitions(qlogsystem PRIVATE QLOGSYSTEM_LIBRARY)
 install(TARGETS qlogsystem DESTINATION lib)
