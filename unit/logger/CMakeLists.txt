@@ -1,7 +1,7 @@
 add_executable(tst_loggertest tst_loggertest.cc)
 target_link_libraries(tst_loggertest 
-    PRIVATE Qt6::Test
-            Qt6::Network
+    PRIVATE Qt::Test
+            Qt::Network
             qlogsystem
             commonHeader
 )

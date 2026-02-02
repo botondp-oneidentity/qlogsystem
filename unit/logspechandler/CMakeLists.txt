@@ -1,7 +1,7 @@
 add_executable(tst_logspechandlertest tst_logspechandlertest.cc)
 target_link_libraries(tst_logspechandlertest 
-    PRIVATE Qt6::Test
-            Qt6::Network
+    PRIVATE Qt::Test
+            Qt::Network
             qlogsystem
 )
 target_include_directories(tst_logspechandlertest 

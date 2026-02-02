@@ -1,7 +1,7 @@
 add_executable(tst_macrostest tst_macrostest.cc)
 target_link_libraries(tst_macrostest 
-    PRIVATE Qt6::Test
-            Qt6::Network
+    PRIVATE Qt::Test
+            Qt::Network
             qlogsystem
             commonHeader
 )

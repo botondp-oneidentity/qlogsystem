@@ -9,7 +9,12 @@ project(qlogsystem-project
     LANGUAGES CXX
 )
 
-find_package(Qt6 COMPONENTS Core REQUIRED)
+if(NOT DEFINED QT_VERSION)
+    set(QT_VERSION 6)
+endif()
+
+find_package(Qt${QT_VERSION} COMPONENTS Core REQUIRED)
+message("-- Qt version found: Qt${QT_VERSION}")
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/install/lib)

@@ -6,7 +6,7 @@ project(qlogsystem-unit
 add_library(commonHeader INTERFACE)
 target_include_directories(commonHeader INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
-find_package(Qt6 COMPONENTS Test Network REQUIRED)
+find_package(Qt${QT_VERSION} COMPONENTS Test Network REQUIRED)
 
 add_subdirectory(iodeviceoutput)
 add_subdirectory(logger)
